@@ -2,14 +2,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project Title</title>
+    <title>Simon</title>
   </head>
   <body>
-    <form id="project-form">
-      <label for="goal">Enter a number:</label>
-      <input id="goal" type="number">
-      <button type="submit">Submit</button>
-    </form>
-    <ul id="solution"></ul>
+    <div class="container">
+      <h1 class="jumbotron">Simon</h1>
+      <button class="btn btn-info" id="start">Start Game</button>
+      <hr />
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="game-button active" id="green">
+            <h1>Green</h1>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="game-button active" id="red">
+            <h1>Red</h1>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="game-button active" id="yellow">
+            <h1>Yellow</h1>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="game-button active" id="blue">
+            <h1>Blue</h1>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

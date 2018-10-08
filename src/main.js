@@ -2,17 +2,22 @@ import './styles.css';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-//Example Code
-import { pingPong } from './project-name.js';
+import { computerTurn, gameSequence} from './simon.js';
 
 $(document).ready(function() {
-  $("#project-form").submit(function(event) {
+  $("button#start").click(function(event) {
     event.preventDefault();
-    var goal = $('#goal').val();
-    var output = pingPong(goal);
-    output.forEach(function(element) {
-      $('#solution').append("<li>" + element + "</li>");
-    });
+
+    computerTurn();
+    for (var i = 0; i < gameSequence.length; i++) {
+      setInterval(function() {
+        $("#" + gameSequence[i]).toggleClass('active');
+      }, 1000);
+      clearInterval()
+    }
+    console.log(gameSequence);
+
+
+
   });
 });
